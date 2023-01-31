@@ -48,3 +48,6 @@ Try for Eureka:
 			private EntityManager entityManager;
 		}
 	
+Setup different profiles for dev, prod, and test environments:
+	- Create xml files name application-dev.properties, application-test.properties, and application-prod.properties in resources folder
+	- 
