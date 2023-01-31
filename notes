@@ -19,8 +19,9 @@ For JNDI:
 	Added config in Config Class:
 
 Try for Eureka:
-	- create new empty bean.xml in WEB-INF. If bean.xml does not work, try beans.xml. Content in repo.
-	- After above step, if exception like this occurs, javax.enterprise.inject.UnsatisfiedResolutionException: Unable to resolve a bean for 'javax.persistence.EntityManager', use below config
+	- To disable bean scanning, create new empty beans.xml in WEB-INF. If beans.xml does not work, try bean.xml. Content in repo.
+	- To disable Weld's automatic bean scanning for an entire deployment, add jboss-all.xml file as in the repo
+	- After above steps, if exception like this occurs, javax.enterprise.inject.UnsatisfiedResolutionException: Unable to resolve a bean for 'javax.persistence.EntityManager', use below config
 		public class CdiConfig {
 			@Produces
 			@Dependent
