@@ -49,5 +49,6 @@ Try for Eureka:
 		}
 	
 Setup different profiles for dev, prod, and test environments:
-	- Create xml files name application-dev.properties, application-test.properties, and application-prod.properties in resources folder
-	- 
+	- Create xml files name application-dev.properties, application-test.properties, application-staging.properties, and application-prod.properties in resources folder
+	- In application.properties file, set spring.profiles.active=prod to set the active profile. By default always set the active profile to prod. For building in dev applications, set up eclipse configuration to run on dev profile.
+	- For testing, in each test class, annotate it with @ActiveProfiles("dev")
