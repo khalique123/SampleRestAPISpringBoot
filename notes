@@ -52,3 +52,21 @@ Setup different profiles for dev, prod, and test environments:
 	- Create xml files name application-dev.properties, application-test.properties, application-staging.properties, and application-prod.properties in resources folder
 	- In application.properties file, set spring.profiles.active=prod to set the active profile. By default always set the active profile to prod. For building in dev applications, set up eclipse configuration to run on dev profile.
 	- For testing, in each test class, annotate it with @ActiveProfiles("dev")
+
+
+Try adding this dependency: 
+	// https://mvnrepository.com/artifact/com.sun.java/tools
+	implementation 'com.sun.java:tools:11.0.1'
+
+I fixed the issue by using latest version of jar and by setting below system property .
+System.setProperty("db2.jcc.charsetDecoderEncoder", "3");
+Also another way is disable unicode encoding for char and varchar type in DB2 SP which also worked for me ..
+
+Issue occurs because of unmatching db2 jar and db2 version. Go to site:https://www.ibm.com/support/pages/db2-jdbc-driver-versions-and-downloads to find appropriate driver.
+
+This is the maven repo for db2 drivers. https://mvnrepository.com/artifact/com.ibm.db2/jcc. Match your DB against the driver version from IBM site above and use appropriate version in gradle.
+
+Go to this site for various drivers available on maven https://mvnrepository.com/artifact/com.ibm.db2
+
+Gradle plugin to deploy directly to Websphere https://github.com/orctom/was-gradle-plugin
+
