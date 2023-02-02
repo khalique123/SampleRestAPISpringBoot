@@ -19,6 +19,18 @@ For JNDI:
 	Added config in Config Class:
 
 Try for Eureka:
+	-	 <dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-apache-client4</artifactId>
+		</dependency>
 	- Try adding dependency implementation 'com.sun.jersey.contribs:jersey-apache-client4:1.19.4'
 	- To disable bean scanning, create new empty beans.xml in WEB-INF. If beans.xml does not work, try bean.xml. Content in repo.
 	- To disable Weld's automatic bean scanning for an entire deployment, add jboss-all.xml file as in the repo
