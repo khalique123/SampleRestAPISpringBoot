@@ -84,3 +84,6 @@ Go to this site for various drivers available on maven https://mvnrepository.com
 Gradle plugin to deploy directly to Websphere https://github.com/orctom/was-gradle-plugin
 
 Sample spring boot application on Websphere https://github.com/siddubyadagi/springboot-jpa-jndidatasource-ibm-websphere
+
+
+-- API Gateway, JWT Auth, Discovery Server: https://github.com/akhuntsaria/spring-boot-api-gateway
